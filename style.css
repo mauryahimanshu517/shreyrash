@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+   
+}
+.lamp{
+    position: fixed;
+    z-index: 999;
+    right: 2%;
+    bottom: 2%;
+}
+.lamp i{
+    font-size: 30px;
+    color: black;
+}
+#lamp2{
+    position: absolute;
+    color: #ffffff;
+    right: 2%;
+    display: none;
+}
+.main_block{
+    width: 100vw;
+    height: 100vh; 
+}
+
+#bg{
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(rga(93,255,231) 10%,#4ba3df);
+    position: relative;
+   
+}
+#main{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 12px 7px;
+    
+    
+}
+#stories::-webkit-scrollbar{
+    display: none;
+}
+#stories{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    padding: 3px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* background-color: red; */
+}
+.story{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    /* white-space: nowrap; */
+    margin-right: 1.5%;
+    padding: 2px;
+    transition: all ease-in 2s;
+    
+}
+.story img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    margin-left: 1.5%;
+    margin-top: 5%;
+    padding: 2px;
+    background: linear-gradient(yellow,rgb(230, 46, 77),black,skyblue,red);
+    
+}
+.story img:hover{
+    scale: 1.2;
+}
+#fullpreview{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 25%;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    display: none;
+    object-fit: cover;
+    object-position: top;
+    z-index: 9;
+}
+#progress{
+    width: 100%;
+    height: 1%;
+    border-radius: 50px;
+    background-color: rgb(41, 41, 41);
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    
+}
+#growth{
+    width: 0%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgb(248, 248, 248);
+   
+}
+@font-face {
+    font-family: "Valentine";
+    src: url(ChiptuneValentineRegular-p7aRr.ttf);
+}
+@font-face {
+    font-family: "carry";
+    src: url(CarryYouRegular-3z71M.ttf);
+}
+@font-face {
+    font-family: "melanie";
+    src: url(Melanie-YzrBq.ttf);
+}
+.text h1{
+    font-family:'valentine';
+    font-size: 3vw;
+    align-items: center;
+    text-align: center;
+}
+.love{
+    font-family: 'valentine';
+    font-size: 1.8vw;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+.text{
+    width: 100vw;
+    height: 100vh;
+   
+}
+.text h1{
+    padding-top: 7vh;
+}
+.card{
+    width: 320px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    margin-left: 3.5%;
+    
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.cardbody{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: #5c5c5c6d;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: -100%;
+    transition: 2s;
+}
+.card-title{
+text-transform: uppercase;
+font-size: 50px;
+font-weight: 500;
+
+}
+.card-sub{
+    text-transform: capitalize;
+    font-size: 16px;
+   font-weight: 300;
+   letter-spacing: 2px;
+   margin-top: 20px;
+   font-weight: 100;
+   font-family: 'Valentine';
+}
+.cardbody .btn{
+    background-color: #eb41f1;
+   color: white;
+   font-size: 1.2vw;
+   font-family: 'Valentine';
+}
+.card:hover .cardbody{
+    right: 0;
+}
+.all_cards{
+    display: flex;
+    margin-top: 7vh;
+}
+
+.cardbody h1{
+    font-family: 'valentine';
+    align-items: center;
+    text-align: center;
+}
+.scroll{
+    width: 100vw;
+    height: 10vh;
+    /* background-color: red; */
+    position: absolute;
+    bottom: -94%;
+    
+}
+.get{
+    font-family: 'Valentine';
+    font-size: 25px;
+}
+.third_pge{
+    width: 100vw;
+    height: 100vh;
+    padding: 4%;
+}
+.third_pge h1{
+    font-family: 'Valentine';
+    align-items: center;
+    text-align: center;
+
+}
+.line{
+    width: 80vw;
+    height: .5px;
+    background-color: rgb(149, 149, 149);
+    margin-left: 10%;
+    
+}
+.cards_img{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    margin-top: 8%;
+}
+
+.all_cardss{
+    display: flex;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+.cardsss{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,.5);
+    transition: .3s;
+    padding: 30px 50px;
+    background: #ffffff;
+    margin-left: 20px;
+    
+}
+.imgs{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 9999;
+    
+}
+.imgs img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;   
+    object-fit: cover; 
+    object-position: top;
+    
+}
+.container{
+    width: 40vw;
+   align-items: center;
+    text-align: center;
+  padding:67% 0 0 0 ;
+    /* transform: translateY(-450px); */
+    opacity: 0;
+    transition: 0.3s;
+}
+.cardsss:hover{
+    height: 300px;
+}
+.cardsss:hover> .container{
+    opacity: 1;
+    transform: translateY(-200px);
+}
+
+p{
+    font-size:14px;
+    font-family: "Valentine";
+}
+.fourth{
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+.fourth h1{
+    padding-top: 5%;
+}
+.bhopal{
+    width: 100%;
+    height: 50%;
+    margin-top: 6%;
+    
+}
+.bhopal h2{
+    align-items: center;
+    text-align: center;
+    
+    font-family: "Valentine";
+    font-size: 3vw;
+    
+}
+.b_images{
+    width: 90%;
+    height: 45%;
+    margin-left: 2.5%;
+    margin-top: 2%;
+    border-radius: 10px;
+    
+}
+.b_images img{
+    width: 100%;
+    border-radius: 10px;
+}
+.fifth{
+    width: 100%;
+    height: 120%;
+}
+.fifth h1{
+    font-family: "Valentine";
+    font-size: 3vw;
+    margin-top: 4%;
+}
+.photos{
+    width: 40%;
+    height: 40%;
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex; 
+}
+.photos img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin-right: 7%;
+    border-radius: 5px;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 2s;
+
+}
+.photos img:hover{
+    filter: grayscale(1);
+    scale: 1.2;
+}
+.sixth{
+    width: 100%;
+    height: 100%;
+
+}
+.x{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.video{
+    width:15%;
+    height: 15%;
+    margin-right: 2%;
+    border-radius: px;
+}
+.video-container video{
+width: 100%;
+height: 100%;
+border-radius: 5px;
+}
+.video-container video:hover{
+    scale: 1.2;
+}
+.seventh{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.seventh h1{
+    align-items: center;
+    text-align: center;
+    font-family: "Valentine";
+    font-size: 3vw;
+    margin-top: 1%;
+}
+.text_container{
+    width: 95%;
+    padding: 1%;
+    height: 81%;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    color: rgb(0, 0, 0);
+    transform: translate(-50%,-50%);
+    background-color:#ffffff;
+    margin-top: 1%;
+    box-shadow: 2px 2px 2px 2px rgb(189, 189, 189);
+    
+}
+.btns{
+    position: absolute;
+    top: 93%;
+   left: 42%;
+   width: 15%;
+   display: flex;
+   justify-content: space-between;
+   
+}
+.speak{
+    width: 100%;
+    border: none;
+    background-color: #F8312F;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    font-size: 20px;
+    font-family: "Valentine";
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+.pause{
+    width: 100%;
+    border: none;
+    background-color:#eb41f1;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    font-family: "Valentine";
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+.text_s{
+    text-transform: capitalize;
+    font-family: "gilroy";
+}
+
+@media only screen and (max-width: 767px){
+
+    .story{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        white-space: nowrap;
+        margin-right: 1.5%;
+        padding: 2px;
+        transition: all ease-in 2s;
+        
+    }
+    
+}
