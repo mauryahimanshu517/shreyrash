@@ -94,6 +94,7 @@ var jbl=document.querySelector(".jbl")
 var shre=document.querySelector(".shrey")
 var vedio=document.querySelector(".vedio")
 var fellings=document.querySelector(".fellings")
+var mode=document.querySelector("#dark-mode-text")
 
 lamp.addEventListener("click",()=>{
     body.style.backgroundColor="#181818";
@@ -109,6 +110,11 @@ lamp.addEventListener("click",()=>{
     shre.style.color="white"
     vedio.style.color="white"
     fellings.style.color="white"
+    mode.style.color="white"
+    if (mode.textContent === "Dark Mode") {
+        mode.textContent = "Light Mode";
+      } 
+    
     
 
     
@@ -127,7 +133,12 @@ lamp2.addEventListener("click",()=>{
     shre.style.color="black"
     vedio.style.color="black"
     fellings.style.color="black"
+    mode.style.color="black"
+    if(mode.textContent === "Light Mode") {
+        mode.textContent = "Dark Mode";
+      } 
    
 })
+
 
 
